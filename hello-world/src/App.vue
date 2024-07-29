@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Agenda"/>
-    <Counter/>
+    <h1>Agenda</h1>
     <FullCalendar :options='calendarOptions' />
   </div>
 </template>
@@ -10,20 +9,16 @@
 import { Component, Vue } from 'vue-property-decorator';
 import FullCalendar from '@fullcalendar/vue';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import HelloWorld from './components/HelloWorld.vue';
-import Counter from './components/Counter.vue';
 
 @Component({
   components: {
-    HelloWorld,
-    Counter,
     FullCalendar,
   },
   data: () => ({
     calendarOptions: {
       plugins: [dayGridPlugin],
       initialView: 'dayGridMonth',
-      weekends: false,
+      weekends: true,
       events: [
         { title: 'Meeting', start: new Date() },
       ],
