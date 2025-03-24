@@ -1,2 +1,2 @@
 # vuejs
- (Not completed) App calendar using Vue.js
+ App calendar using Vue.js
